@@ -1,0 +1,15 @@
+def runtime(function):
+    def display():
+        text = function()
+        print("Highlighted letters:")
+        for ch in text:
+            print(f"[{ch}]", end=" ")
+        print("\n")
+        return len(text)
+    return display
+
+@runtime
+def username():
+    return "welcome to vglug"
+
+print("Length of text:", username())
