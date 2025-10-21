@@ -1,0 +1,10 @@
+def changecase(func):
+  def myinner():
+    return func().lower()
+  return myinner
+
+@changecase
+def myfunction():
+  return "Welcome to Priya"
+
+print(myfunction())
